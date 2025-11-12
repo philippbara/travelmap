@@ -9,10 +9,31 @@
 </head>
 <body>
   <div id="map"></div>
+
+  <h3>Embed this map on your website</h3>
+  <div id="embed-container">
+    <input 
+      type="text" 
+      id="embed-code" 
+      readonly 
+      style="width:100%; padding:8px; font-family:monospace;"
+      value='<iframe src="{{ request.url_for("embed_map", map_id=map_id) }}" width="800" height="500" style="border:0;" allowfullscreen></iframe>'
+    />
+    <button id="copy-btn" style="margin-top:8px;">Copy Embed Code</button>
+  </div>
+
   <script>
     const MAPBOX_ACCESS_TOKEN = "{{ mapbox_token }}";
   </script>
   <script id="pois-data" type="application/json">{{ pois_json|safe }}</script>
   <script src="/static/js/map.js"></script>
+  <script>
+    document.getElementById('copy-btn').addEventListener('click', () => {
+      const input = document.getElementById('embed-code');
+      input.select();
+      document.execCommand('copy');
+      alert('Embed code copied to clipboard!');
+    });
+  </script>
 </body>
 </html>
