@@ -34,3 +34,14 @@ def enrich_pois(pois_text: list[dict]) -> list[POI]:
             print(f"Failed to enrich {name}: {e}")
 
     return enriched
+
+def parse_blog_to_pois(url: str) -> list[dict]:
+    """
+    Mock function: in MVP, just return some dummy POIs for the given blog URL.
+    Later, replace with real LLM logic to extract POIs from the page content.
+    """
+    return [
+        {"name": "Oslo"},
+        {"name": "Bergen"},
+        {"name": "Trondheim"}
+    ]
