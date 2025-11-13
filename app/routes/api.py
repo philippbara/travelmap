@@ -6,6 +6,7 @@ from app.services.poi_enrichment import enrich_pois, parse_blog_to_pois
 
 router = APIRouter(prefix="/api")
 
+
 @router.post("/generate")
 def generate_map(pois_text: list[dict]):
     """Accept text-only POIs, enrich them, save map, return map_id."""

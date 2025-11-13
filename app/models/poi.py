@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 
+
 class POI(BaseModel):
     name: str
     lat: float

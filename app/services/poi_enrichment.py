@@ -5,6 +5,7 @@ from app.pkg.ai_client import ai_request, SYSTEM_MESSAGE, USER_MESSAGE
 from app.pkg.scrape import scrape_webpage
 from app.utils.text_format import html_to_text, markdown_to_json
 
+
 def enrich_pois(pois_text: list[dict]) -> list[POI]:
     """
     Input: [{"name": "Oslo"}, {"name": "Bergen"}]
@@ -30,13 +31,14 @@ def enrich_pois(pois_text: list[dict]) -> list[POI]:
                         name=name,
                         lat=f["center"][1],
                         lon=f["center"][0],
-                        place_name=f["place_name"]
+                        place_name=f["place_name"],
                     )
                 )
         except Exception as e:
             print(f"Failed to enrich {name}: {e}")
 
     return enriched
+
 
 def parse_blog_to_pois(url: str) -> list[dict]:
     blog_content = scrape_webpage(url)
