@@ -6,6 +6,9 @@ on:
   pull_request:
     branches: [main, master]
 
+permissions:
+  contents: write # ✅ allows git push
+
 jobs:
   # 🔹 Check formatting in PRs (no write)
   check:
