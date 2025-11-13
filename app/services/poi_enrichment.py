@@ -6,6 +6,7 @@ from app.pkg.scrape import scrape_webpage
 from app.utils.text_format import html_to_text, markdown_to_json
 
 from app.logger import setup_logger
+
 logger = setup_logger(__name__)
 
 
