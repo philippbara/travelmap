@@ -35,7 +35,7 @@ def ai_request(sys_msg: str, usr_msg: str) -> str:
 
     return ai_content
 
-SYSTEM_MESSAGE = SYSTEM_MESSAGE = """
+SYSTEM_MESSAGE = """
 You are a data extraction assistant specialized in travel content analysis.
 
 Your input is a travel blog or trip diary where a traveler describes their journey, destinations, and the places they personally visited, passed through, or explicitly recommend visiting.

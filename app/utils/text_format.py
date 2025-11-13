@@ -24,13 +24,27 @@ def html_to_text(html: str) -> str:
     ]):
         tag.decompose()
 
-    # Remove elements with common non-content classes/ids
-    for el in body.find_all(attrs={"class": True, "id": True}):
-        class_id = " ".join(el.get("class", [])) + " " + el.get("id", "")
+    # Collect elements with common non-content classes/ids (don't remove yet)
+    elements_to_remove = []
+    for el in body.find_all(attrs={"class": True}):
+        class_id = " ".join(el.get("class", []))
         if any(k in class_id.lower() for k in [
             "nav", "menu", "comment", "share", "footer", "header",
             "subscribe", "newsletter", "related", "promo", "advert"
         ]):
+            elements_to_remove.append(el)
+    
+    for el in body.find_all(attrs={"id": True}):
+        elem_id = el.get("id", "")
+        if any(k in elem_id.lower() for k in [
+            "nav", "menu", "comment", "share", "footer", "header",
+            "subscribe", "newsletter", "related", "promo", "advert"
+        ]):
+            elements_to_remove.append(el)
+    
+    # Now remove all collected elements
+    for el in elements_to_remove:
+        if el.parent:  # Check if still in tree
             el.decompose()
 
     # Remove comments
@@ -77,6 +91,7 @@ def html_to_text(html: str) -> str:
         text = f"Title: {title}\n{text}"
 
     return text.strip()
+ 
 
 def markdown_to_json(markdown: str) -> str:
     # Strip markdown code blocks
