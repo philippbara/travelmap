@@ -5,3 +5,5 @@ requests
 python-dotenv
 pydantic
 pydantic-settings
+playwright
+beautifulsoup4

@@ -1,11 +1,14 @@
 import requests
 from app.models.poi import POI
 from app.config import settings
+from app.pkg.ai_client import ai_request, SYSTEM_MESSAGE, USER_MESSAGE
+from app.pkg.scrape import scrape_webpage
+from app.utils.text_format import html_to_text, markdown_to_json
 
 def enrich_pois(pois_text: list[dict]) -> list[POI]:
     """
     Input: [{"name": "Oslo"}, {"name": "Bergen"}]
-    Output: List of POI objects with lat, lon, place_name
+    Output: list of POI objects with lat, lon, place_name
     """
     enriched = []
 
@@ -36,12 +39,9 @@ def enrich_pois(pois_text: list[dict]) -> list[POI]:
     return enriched
 
 def parse_blog_to_pois(url: str) -> list[dict]:
-    """
-    Mock function: in MVP, just return some dummy POIs for the given blog URL.
-    Later, replace with real LLM logic to extract POIs from the page content.
-    """
-    return [
-        {"name": "Oslo"},
-        {"name": "Bergen"},
-        {"name": "Trondheim"}
-    ]
+    blog_content = scrape_webpage(url)
+    blog_text = html_to_text(blog_content)
+    ai_response = ai_request(SYSTEM_MESSAGE, USER_MESSAGE.format(blog_text))
+    pois_dict = markdown_to_json(ai_response)
+
+    return pois_dict

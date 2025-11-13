@@ -1,12 +1,12 @@
 <h2>Generate Map from JSON</h2>
 <form id="json-form">
-  <textarea id="json-input" rows="10" cols="50" placeholder='[{"name": "Oslo"}, {"name": "Bergen"}]'></textarea><br/>
+  <textarea id="json-input" rows="10" cols="50" placeholder='[{"name": "Oslo"}, {"name": "Bergen"}]'></textarea><br />
   <button type="submit">Generate Map</button>
 </form>
 
 <h2>Generate Map from Blog URL</h2>
 <form id="blog-form">
-  <input type="url" id="blog-input" placeholder="Enter blog URL" size="50" required><br/>
+  <input type="url" id="blog-input" placeholder="Enter blog URL" size="50" required><br />
   <button type="submit">Generate Map from Blog</button>
 </form>
 
@@ -21,7 +21,7 @@
       body: JSON.stringify(data)
     });
     const result = await resp.json();
-    if(result.map_id) window.location.href = `/map/${result.map_id}`;
+    if (result.map_id) window.location.href = `/map/${result.map_id}`;
     else alert("Failed to generate map");
   });
 
@@ -35,7 +35,7 @@
       body: JSON.stringify({ url })
     });
     const result = await resp.json();
-    if(result.map_id) window.location.href = `/map/${result.map_id}`;
+    if (result.map_id) window.location.href = `/map/${result.map_id}`;
     else alert("Failed to parse blog and generate map");
   });
 </script>
