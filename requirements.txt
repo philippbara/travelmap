@@ -8,3 +8,6 @@ pydantic-settings
 playwright
 trafilatura
 json-repair
+pytest
+pytest-asyncio
+httpx
