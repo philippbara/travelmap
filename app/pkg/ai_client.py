@@ -17,23 +17,20 @@ def ai_request(sys_msg: str, usr_msg: str) -> str:
         "model": OPENROUTER_MODEL,
         "messages": [
             {"role": "system", "content": sys_msg},
-            {"role": "user", "content": usr_msg}
+            {"role": "user", "content": usr_msg},
         ],
         "temperature": 0.0,
         "top_p": 1.0,
     }
 
-    response = re.post(
-        OPENROUTER_URL,
-        headers=headers,
-        json=payload
-    )
+    response = re.post(OPENROUTER_URL, headers=headers, json=payload)
     result = response.json()
-    
+
     # Parse the response
     ai_content = result["choices"][0]["message"]["content"]
 
     return ai_content
+
 
 SYSTEM_MESSAGE = """
 You are a data extraction assistant specialized in travel content analysis.
@@ -110,4 +107,3 @@ From the following cleaned webpage text, extract all specific geographic locatio
 Text:
 {}
 """
-

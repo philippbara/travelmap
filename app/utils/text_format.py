@@ -2,6 +2,7 @@ import re
 import json
 from bs4 import BeautifulSoup, Comment
 
+
 def html_to_text(html: str) -> str:
     """
     Converts HTML to clean plain text optimized for travel content extraction.
@@ -18,30 +19,66 @@ def html_to_text(html: str) -> str:
     body = soup.body or soup
 
     # Remove non-content tags
-    for tag in body.find_all([
-        "a", "script", "style", "nav", "header", "footer", "aside",
-        "iframe", "noscript", "form", "svg", "figure"
-    ]):
+    for tag in body.find_all(
+        [
+            "a",
+            "script",
+            "style",
+            "nav",
+            "header",
+            "footer",
+            "aside",
+            "iframe",
+            "noscript",
+            "form",
+            "svg",
+            "figure",
+        ]
+    ):
         tag.decompose()
 
     # Collect elements with common non-content classes/ids (don't remove yet)
     elements_to_remove = []
     for el in body.find_all(attrs={"class": True}):
         class_id = " ".join(el.get("class", []))
-        if any(k in class_id.lower() for k in [
-            "nav", "menu", "comment", "share", "footer", "header",
-            "subscribe", "newsletter", "related", "promo", "advert"
-        ]):
+        if any(
+            k in class_id.lower()
+            for k in [
+                "nav",
+                "menu",
+                "comment",
+                "share",
+                "footer",
+                "header",
+                "subscribe",
+                "newsletter",
+                "related",
+                "promo",
+                "advert",
+            ]
+        ):
             elements_to_remove.append(el)
-    
+
     for el in body.find_all(attrs={"id": True}):
         elem_id = el.get("id", "")
-        if any(k in elem_id.lower() for k in [
-            "nav", "menu", "comment", "share", "footer", "header",
-            "subscribe", "newsletter", "related", "promo", "advert"
-        ]):
+        if any(
+            k in elem_id.lower()
+            for k in [
+                "nav",
+                "menu",
+                "comment",
+                "share",
+                "footer",
+                "header",
+                "subscribe",
+                "newsletter",
+                "related",
+                "promo",
+                "advert",
+            ]
+        ):
             elements_to_remove.append(el)
-    
+
     # Now remove all collected elements
     for el in elements_to_remove:
         if el.parent:  # Check if still in tree
@@ -66,15 +103,20 @@ def html_to_text(html: str) -> str:
         r"advert|terms|policy|login|signup|copyright|©"
         r")\b"
     )
-    lines = [line for line in text.splitlines()
-             if len(line.strip()) > 2 and not boilerplate.search(line)]
+    lines = [
+        line
+        for line in text.splitlines()
+        if len(line.strip()) > 2 and not boilerplate.search(line)
+    ]
 
     text = "\n".join(lines)
 
     # --- Extra cleanup steps (generic, high-impact) ---
     # 1. Remove "Essential Info" and booking blurbs
     text = re.sub(r"(?is)essential info:.*", "", text)
-    text = re.sub(r"(?i)\b(book(ing)?|rates?|prices?|insurance|emailing|hosted by)\b.*", "", text)
+    text = re.sub(
+        r"(?i)\b(book(ing)?|rates?|prices?|insurance|emailing|hosted by)\b.*", "", text
+    )
 
     # 2. Drop orphan / fragment lines (too short to be narrative)
     text = "\n".join(line for line in text.splitlines() if len(line.split()) > 2)
@@ -91,28 +133,28 @@ def html_to_text(html: str) -> str:
         text = f"Title: {title}\n{text}"
 
     return text.strip()
- 
+
 
 def markdown_to_json(markdown: str) -> str:
     # Strip markdown code blocks
     markdown = markdown.strip()
-    
+
     # Remove leading text before JSON
     if "```json" in markdown:
         markdown = markdown.split("```json")[1].split("```")[0].strip()
     elif "```" in markdown:
         markdown = markdown.split("```")[1].split("```")[0].strip()
-    
+
     # Remove any leading explanatory text (look for first "[")
     if not markdown.startswith("["):
         json_start = markdown.find("[")
         if json_start != -1:
             markdown = markdown[json_start:]
-    
+
     # Remove any trailing text after JSON (look for last "]")
     if not markdown.endswith("]"):
         json_end = markdown.rfind("]")
         if json_end != -1:
-            markdown = markdown[:json_end + 1]
+            markdown = markdown[: json_end + 1]
 
     return json.loads(markdown)

@@ -7,12 +7,16 @@ import json
 router = APIRouter()
 templates = Jinja2Templates(directory="app/templates")
 
+
 @router.get("/")
 def home(request: Request):
     """Render homepage with JSON upload form."""
     return templates.TemplateResponse("homepage.html", {"request": request})
 
+
 """ This path will serve the map editting area for the user """
+
+
 @router.get("/map/{map_id}")
 def view_map(request: Request, map_id: str):
     """Render the map page with enriched POIs."""
@@ -23,17 +27,23 @@ def view_map(request: Request, map_id: str):
             "request": request,
             "pois_json": json.dumps([poi.dict() for poi in pois]),
             "map_id": map_id,
-            "mapbox_token": settings.MAPBOX_TOKEN
-        }
+            "mapbox_token": settings.MAPBOX_TOKEN,
+        },
     )
 
+
 """ This path will serve the map embedding link"""
+
+
 @router.get("/embed/{map_id}")
 def embed_map(request: Request, map_id: str):
     """Render the embedded map page with enriched POIs."""
     pois = load_map(map_id)
-    return templates.TemplateResponse("embed.html", {
-        "request": request,
-        "pois_json": json.dumps([poi.dict() for poi in pois]),
-        "mapbox_token": settings.MAPBOX_TOKEN
-    })
+    return templates.TemplateResponse(
+        "embed.html",
+        {
+            "request": request,
+            "pois_json": json.dumps([poi.dict() for poi in pois]),
+            "mapbox_token": settings.MAPBOX_TOKEN,
+        },
+    )
