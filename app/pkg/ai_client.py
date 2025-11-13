@@ -39,6 +39,7 @@ async def ai_request_async(sys_msg: str, usr_msg: str) -> str:
 
     return ai_content
 
+
 SYSTEM_MESSAGE = """
 You are a data extraction assistant specialized in travel content analysis.
 
