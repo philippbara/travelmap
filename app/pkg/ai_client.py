@@ -27,7 +27,10 @@ def ai_request(sys_msg: str, usr_msg: str) -> str:
     result = response.json()
 
     # Parse the response
-    ai_content = result["choices"][0]["message"]["content"]
+    try:
+        ai_content = result["choices"][0]["message"]["content"]
+    except (KeyError, IndexError) as e:
+        raise ValueError(f"Invalid response from AI API: {result}") from e
 
     return ai_content
 

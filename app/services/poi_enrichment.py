@@ -3,7 +3,7 @@ from app.models.poi import POI
 from app.config import settings
 from app.pkg.ai_client import ai_request, SYSTEM_MESSAGE, USER_MESSAGE
 from app.pkg.scrape import scrape_webpage
-from app.utils.text_format import html_to_text, markdown_to_json
+from app.utils.text_format import html_to_clean_text, markdown_to_json
 
 from app.logger import setup_logger
 
@@ -58,7 +58,7 @@ def parse_blog_to_pois(url: str) -> list[dict]:
 
     logger.info("Scraped blog content length: %d", len(blog_content))
 
-    blog_text = html_to_text(blog_content)
+    blog_text = html_to_clean_text(blog_content)
 
     logger.info("Converted blog content to text, length: %d", len(blog_text))
 
