@@ -29,7 +29,7 @@ async def test_llm_parse_route(
 
     with (
         patch("app.services.poi_enrichment.scrape_webpage", return_value=fake_html),
-        patch("app.services.poi_enrichment.ai_request", return_value=fake_ai_json_str),
+        patch("app.services.poi_enrichment.ai_request_async", return_value=fake_ai_json_str),
         patch("app.services.poi_enrichment.requests.get", side_effect=mapbox_mock),
         patch("app.routes.api.save_map", return_value="map-999") as mock_save,
     ):

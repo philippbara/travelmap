@@ -1,7 +1,7 @@
 import requests
 from app.models.poi import POI
 from app.config import settings
-from app.pkg.ai_client import ai_request, SYSTEM_MESSAGE, USER_MESSAGE
+from app.pkg.ai_client import ai_request_async, SYSTEM_MESSAGE, USER_MESSAGE
 from app.pkg.scrape import scrape_webpage
 from app.utils.text_format import html_to_clean_text, markdown_to_json
 
@@ -51,10 +51,10 @@ def enrich_pois(pois_text: list[dict]) -> list[POI]:
     return enriched
 
 
-def parse_blog_to_pois(url: str) -> list[dict]:
+async def parse_blog_to_pois(url: str) -> list[dict]:
     logger.info("Scraping blog URL: %s", url)
 
-    blog_content = scrape_webpage(url)
+    blog_content = await scrape_webpage(url)
 
     logger.info("Scraped blog content length: %d", len(blog_content))
 
@@ -64,7 +64,7 @@ def parse_blog_to_pois(url: str) -> list[dict]:
 
     logger.info("Sending text to AI for POI extraction")
 
-    ai_response = ai_request(SYSTEM_MESSAGE, USER_MESSAGE.format(blog_text))
+    ai_response = await ai_request_async(SYSTEM_MESSAGE, USER_MESSAGE.format(blog_text))
 
     logger.info("Received AI response, length: %d", len(ai_response))
 

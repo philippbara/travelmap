@@ -8,7 +8,7 @@ router = APIRouter(prefix="/api")
 
 
 @router.post("/generate")
-def generate_map(pois_text: list[dict]):
+async def generate_map(pois_text: list[dict]):
     """Accept text-only POIs, enrich them, save map, return map_id."""
     enriched = enrich_pois(pois_text)
     map_id = save_map(enriched)
@@ -16,7 +16,7 @@ def generate_map(pois_text: list[dict]):
 
 
 @router.post("/llm_parse")
-def llm_parse(blog_data: dict):
+async def llm_parse(blog_data: dict):
     """
     Accepts {"url": "..."}.
     Uses LLM (or mock function for MVP) to extract POIs from blog content.
@@ -26,7 +26,7 @@ def llm_parse(blog_data: dict):
     if not url:
         raise HTTPException(status_code=400, detail="Missing 'url' in request")
 
-    pois_dict = parse_blog_to_pois(url)  # returns list[dict] with {"name": ...}
+    pois_dict = await parse_blog_to_pois(url)  # returns list[dict] with {"name": ...}
     enriched = enrich_pois(pois_dict)
     map_id = save_map(enriched)
 
