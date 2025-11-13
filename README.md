@@ -6,6 +6,10 @@ A small FastAPI project that allows users to generate interactive maps from trav
 **Features**
 ------------
 
+*   Extract POIs from travel blog text using LLM
+
+*   Fetches content from blogs using Playwright (headless browser)
+
 *   Upload JSON containing POIs (name only).
     
 *   Automatically enriches POIs with coordinates using Mapbox Geocoding API.
@@ -29,15 +33,21 @@ A small FastAPI project that allows users to generate interactive maps from trav
     
 `   python -m venv venv  source venv/bin/activate   # On Windows: venv\Scripts\activate  pip install -r requirements.txt   `
 
-3.  Create a .env file with your Mapbox token:
-    
-`   MAPBOX_TOKEN=your_mapbox_token_here   `
+3. Install playwright
 
-4.  Run the app:
+` playwright install `
+
+4.  Create a .env file with your Mapbox token:
+
+```
+MAPBOX_TOKEN=your_mapbox_token_here
+OPENROUTER_API_KEY=your_openrouter_token_here
+```
+5.  Run the app:
     
 `   uvicorn app.main:app --reload   `
 
-5.  Open [http://localhost:8000](http://localhost:8000) in your browser.
+6.  Open [http://localhost:8000](http://localhost:8000) in your browser.
     
 
 **Usage**
@@ -46,6 +56,8 @@ A small FastAPI project that allows users to generate interactive maps from trav
 1.  On the homepage, paste or upload JSON like:
     
 `   [    {"name": "Oslo"},    {"name": "Bergen"}  ]   `
+
+    Or insert the URL and it will parse the data automatically.
 
 2.  Click **Generate Map**.
     

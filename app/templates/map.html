@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>Interactive Map</title>
   <link href="https://api.mapbox.com/mapbox-gl-js/v3.17.0-beta.1/mapbox-gl.css" rel="stylesheet">
   <script src="https://api.mapbox.com/mapbox-gl-js/v3.17.0-beta.1/mapbox-gl.js"></script>
-  <style>#map { width: 100%; height: 100vh; }</style>
+  <style>
+    #map {
+      width: 100%;
+      height: 100vh;
+    }
+  </style>
 </head>
+
 <body>
   <div id="map"></div>
 
   <h3>Embed this map on your website</h3>
   <div id="embed-container">
-    <input 
-      type="text" 
-      id="embed-code" 
-      readonly 
-      style="width:100%; padding:8px; font-family:monospace;"
-      value='<iframe src="{{ request.url_for("embed_map", map_id=map_id) }}" width="800" height="500" style="border:0;" allowfullscreen></iframe>'
-    />
+    <input type="text" id="embed-code" readonly style="width:100%; padding:8px; font-family:monospace;"
+      value='<iframe src="{{ request.url_for("embed_map", map_id=map_id) }}" width="800" height="500" style="border:0;" allowfullscreen></iframe>' />
     <button id="copy-btn" style="margin-top:8px;">Copy Embed Code</button>
   </div>
 
@@ -36,4 +38,5 @@
     });
   </script>
 </body>
+
 </html>
