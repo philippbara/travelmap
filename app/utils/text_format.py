@@ -2,6 +2,7 @@ import json
 import trafilatura
 from json_repair import repair_json
 
+
 def html_to_clean_text(html: str) -> str:
     result = trafilatura.extract(
         html,
@@ -12,6 +13,7 @@ def html_to_clean_text(html: str) -> str:
         favor_recall=True,  # capture long-form text
     )
     return result.strip() if result else ""
+
 
 def markdown_to_json(markdown: str):
     try:
