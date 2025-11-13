@@ -18,12 +18,14 @@ async def test_generate_route(client, fake_ai_json_str, mapbox_mock):
     data = response.json()
 
     assert data["map_id"] == "map-id-123"
-    assert data["count"] == 5       # all enriched
+    assert data["count"] == 5  # all enriched
     mock_save.assert_called_once()
 
 
 @pytest.mark.asyncio
-async def test_llm_parse_route(client, example_url, fake_html, fake_ai_json_str, mapbox_mock):
+async def test_llm_parse_route(
+    client, example_url, fake_html, fake_ai_json_str, mapbox_mock
+):
 
     with (
         patch("app.services.poi_enrichment.scrape_webpage", return_value=fake_html),

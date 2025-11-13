@@ -29,14 +29,15 @@ def fake_ai_json():
 @pytest.fixture
 def fake_ai_json_str(fake_ai_json):
     import json
+
     return json.dumps(fake_ai_json)
 
 
 @pytest.fixture
 def fake_mapbox_json():
     return {
-        "Lake Bled":  [14.0937, 46.3625],
-        "Ljubljana":  [14.5058, 46.0569],
+        "Lake Bled": [14.0937, 46.3625],
+        "Ljubljana": [14.5058, 46.0569],
         "Bled Island": [14.0949, 46.3637],
         "Bled Castle": [14.1010, 46.3692],
         "Ojstrica Viewpoint": [14.0875, 46.3594],
@@ -52,12 +53,16 @@ def mapbox_mock(fake_mapbox_json):
         name = url.split("/")[-1].replace(".json", "")
         coords = fake_mapbox_json.get(name)
         if coords:
-            return SimpleNamespace(json=lambda: {
-                "features": [{
-                    "center": coords,
-                    "place_name": name,    # REQUIRED by your code
-                }]
-            })
+            return SimpleNamespace(
+                json=lambda: {
+                    "features": [
+                        {
+                            "center": coords,
+                            "place_name": name,  # REQUIRED by your code
+                        }
+                    ]
+                }
+            )
         return SimpleNamespace(json=lambda: {"features": []})
 
     return _side_effect

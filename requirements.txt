@@ -11,3 +11,4 @@ json-repair
 pytest
 pytest-asyncio
 httpx
+black

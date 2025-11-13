@@ -78,6 +78,19 @@ OPENROUTER_API_KEY=your_openrouter_token_here
     *   /map/{map\_id} → display map
         
 
+**Formating**
+-------------
+
+* Apply black `black .`
+
+
+
+**Run tests**
+-------------
+
+* Run `pytest`
+
+
 **Notes**
 ---------
 
