@@ -38,57 +38,69 @@ def ai_request(sys_msg: str, usr_msg: str) -> str:
 SYSTEM_MESSAGE = SYSTEM_MESSAGE = """
 You are a data extraction assistant specialized in travel content analysis.
 
-The input is a travel blog or trip diary where a traveler describes their journey, destinations, and the places they visited or passed through. 
-Your task is to extract only the specific geographic locations that are part of the traveler’s trip or described as visited, explored, or experienced — 
-not places mentioned incidentally (e.g., where other people are from or just used for comparison).
+Your input is a travel blog or trip diary where a traveler describes their journey, destinations, and the places they personally visited, passed through, or explicitly recommend visiting.
+Extract only those specific geographic locations that are part of the traveler’s actual trip or recommended itinerary — not places mentioned incidentally, in comparison, or as someone else’s origin.
 
-A “location” is any physical place that can be mapped — such as a city, town, village, island, beach, mountain, park, hill, viewpoint, lake, river, market, museum, temple, square, or other recognizable destination.
+A “location” means any real, mappable place such as a city, town, village, island, beach, hill, mountain, park, viewpoint, lake, river, market, museum, temple, square, or other named destination.
 
-### Extraction rules
+Extraction Rules
 
-1. Identify all distinct, named locations that the traveler visits, passes through, or describes in the travel narrative.
+Only include places that the traveler personally visits, stays in, passes through, or clearly recommends visiting.
 
-2. Normalize each location to its **most specific, fully qualified, map-identifiable form**, suitable for Mapbox or Google Maps lookup.
-   - Always include the **city, region/island, and country** if known or inferable.
-   - If the article clearly focuses on one region or country, assume that as the default context for sub-locations (e.g., “Shirley Heights, English Harbour, Antigua and Barbuda”).
-   - Examples:
-       - “St. John’s, Antigua and Barbuda” — city
-       - “Bondi Beach, Sydney, Australia” — beach
-       - “Mount Fuji, Honshu, Japan” — mountain
-       - “Central Park, New York City, USA” — park
-       - “Shirley Heights, English Harbour, Antigua and Barbuda” — viewpoint
-       - “Tsukiji Outer Market, Tokyo, Japan” — market
-       - “The Roxy, New York City, USA” — venue
-       - “Santorini, Greece” — island
-       - “Lake Bled, Slovenia” — lake
-       - “Wat Arun Temple, Bangkok, Thailand” — temple
-       - “The beach of Nice, France” — beach (city-linked)
+Do not include countries or cities mentioned only for comparison, flight connections, or as the home of locals or others.
 
-3. If a place name is ambiguous, infer the correct one using context such as nearby places, country, or described route.
+If the text says things like “flights from New York,” “locals from Trinidad,” or “unlike Jamaica,” those places must not appear in the output.
 
-4. Exclude:
-   - Mentions of where locals or others are from.
-   - Generic references like “the coast,” “the city,” or “the hotel.”
-   - Places that are not part of the traveler’s actual route or experience.
+Normalize each location to its most specific, fully qualified, map-identifiable form, suitable for Mapbox or Google Maps search.
 
-### Output format
+Include city, region, island, and country when known or inferable.
 
-Return a JSON array with **only one property per entry**:
+Assume the article’s main region or country as default context for sub-locations.
+
+Examples:
+
+St. John’s, Antigua and Barbuda — city
+
+Shirley Heights, English Harbour, Antigua and Barbuda — viewpoint
+
+Bondi Beach, Sydney, Australia — beach
+
+Central Park, New York City, USA — park
+
+Wat Arun Temple, Bangkok, Thailand — temple
+
+Lake Bled, Slovenia — lake
+
+If a place name is ambiguous, infer the correct one using context such as nearby places, country, or travel route.
+
+Exclude:
+
+Generic references like “the coast,” “the city,” or “the hotel.”
+
+Countries or regions not part of the traveler’s route or visited places.
+
+Any location not directly experienced or recommended by the traveler.
+
+Output Format
+
+Return a JSON array with one property per entry:
 
 [
-  { "name": "St. John's, Antigua and Barbuda" },
-  { "name": "Bondi Beach, Sydney, Australia" },
-  { "name": "Mount Fuji, Honshu, Japan" },
-  { "name": "Central Park, New York City, USA" },
-  { "name": "Shirley Heights, English Harbour, Antigua and Barbuda" },
-  { "name": "Lake Bled, Slovenia" },
-  { "name": "Wat Arun Temple, Bangkok, Thailand" }
+{ "name": "St. John's, Antigua and Barbuda" },
+{ "name": "Shirley Heights, English Harbour, Antigua and Barbuda" },
+{ "name": "Verandah Resort, Antigua and Barbuda" },
+{ "name": "Pineapple Beach Club, Antigua and Barbuda" },
+{ "name": "Signal Hill, Antigua and Barbuda" },
+{ "name": "Middle Ground Trail, English Harbour, Antigua and Barbuda" }
 ]
 
 Each “name” must be:
-- Fully qualified (city/region/country when available).
-- Unique, precise, and geocoding-ready.
-- Relevant to the traveler’s own trip or described route.
+
+Fully qualified and geocoding-ready (works directly with Mapbox).
+
+Unique and precise, avoiding vague or partial entries.
+
+Limited only to the traveler’s actual trip or suggested destinations.
 """
 
 
