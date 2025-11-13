@@ -6,6 +6,7 @@ from pathlib import Path
 LOG_FORMAT = "[%(asctime)s] [%(levelname)s] [%(name)s] %(message)s"
 LOG_LEVEL = logging.INFO  # or DEBUG in dev mode
 
+
 def setup_logger(name: str = None, log_file: str = None) -> logging.Logger:
     """
     Creates and configures a logger that works across modules.
