@@ -4,10 +4,10 @@ import json
 
 
 @pytest.mark.asyncio
-async def test_generate_route(client, fake_ai_json_str, mapbox_mock):
+async def test_generate_route(client, fake_generate_input, mapbox_mock):
 
-    body = json.loads(fake_ai_json_str)
-
+    body = json.loads(fake_generate_input)
+    
     with (
         patch("app.services.poi_enrichment.requests.get", side_effect=mapbox_mock),
         patch("app.routes.api.save_map", return_value="map-id-123") as mock_save,
@@ -24,14 +24,14 @@ async def test_generate_route(client, fake_ai_json_str, mapbox_mock):
 
 @pytest.mark.asyncio
 async def test_llm_parse_route(
-    client, example_url, fake_html, fake_ai_json_str, mapbox_mock
+    client, example_url, fake_html, fake_llm_response, mapbox_mock
 ):
 
     with (
         patch("app.services.poi_enrichment.scrape_webpage", return_value=fake_html),
         patch(
             "app.services.poi_enrichment.ai_request_async",
-            return_value=fake_ai_json_str,
+            return_value=fake_llm_response,
         ),
         patch("app.services.poi_enrichment.requests.get", side_effect=mapbox_mock),
         patch("app.routes.api.save_map", return_value="map-999") as mock_save,
