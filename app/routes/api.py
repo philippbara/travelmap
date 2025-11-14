@@ -26,8 +26,8 @@ async def llm_parse(blog_data: dict):
     if not url:
         raise HTTPException(status_code=400, detail="Missing 'url' in request")
 
-    pois_dict = await parse_blog_to_pois(url)  # returns list[dict] with {"name": ...}
-    enriched = enrich_pois(pois_dict)
+    pois_json = await parse_blog_to_pois(url)  # returns list[dict] with {"name": ...}
+    enriched = enrich_pois(pois_json)
     map_id = save_map(enriched)
 
     return JSONResponse({"map_id": map_id, "count": len(enriched)})

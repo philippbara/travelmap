@@ -68,10 +68,15 @@ async def parse_blog_to_pois(url: str) -> list[dict]:
 
     logger.info("Received AI response, length: %d", len(ai_response))
 
-    pois_dict = markdown_to_json(ai_response)
+    pois_json = markdown_to_json(ai_response)
 
-    pois_names = [poi.get("name") for poi in pois_dict if poi.get("name")]
-    logger.info("Parsed POIs from AI response: %s", pois_names)
-    logger.info("Total POIs extracted: %d", len(pois_dict))
+    # Add in to mask the dict. Improve in the future. TO CHANGE
+    pois_json = [
+        {"name": feature["properties"].get("name", "")}
+        for feature in pois_json["features"]
+    ]
 
-    return pois_dict
+    logger.info("Parsed POIs from AI response: %s", pois_json)
+    logger.info("Total POIs extracted: %d", len(pois_json))
+
+    return pois_json
