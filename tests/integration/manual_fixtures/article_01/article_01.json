@@ -1,0 +1,358 @@
+{
+    "id": "article_03",
+    "url": "https://www.visitnorway.com/places-to-go/city-break/10000-steps/oslo/",
+    "title": "24 hours in Oslo | 5 cool city walks",
+    "ai_json": [
+        {
+            "name": "Nordmarka, Oslo"
+        },
+        {
+            "name": "Akerselva River, Oslo"
+        },
+        {
+            "name": "Harbour Promenade, Oslo"
+        },
+        {
+            "name": "Deichman Library, Oslo"
+        },
+        {
+            "name": "MUNCH museum, Oslo"
+        },
+        {
+            "name": "Talormade Oslobukta, Oslo"
+        },
+        {
+            "name": "Operastranda in Bjørvika, Oslo"
+        },
+        {
+            "name": "Deichman Bjørvika / Oslo Public Library, Main Branch, Oslo"
+        },
+        {
+            "name": "SALT, Oslo"
+        },
+        {
+            "name": "Anker bridge, Oslo"
+        },
+        {
+            "name": "Mathallen Food Hall, Oslo"
+        },
+        {
+            "name": "The Palace Park"
+        },
+        {
+            "name": "The Royal Palace"
+        },
+        {
+            "name": "Oslo City Hall"
+        },
+        {
+            "name": "Akershus Fortress"
+        },
+        {
+            "name": "Vippa Oslo"
+        },
+        {
+            "name": "Koie Ramen Munch"
+        },
+        {
+            "name": "Bjørvika"
+        },
+        {
+            "name": "The Tiger"
+        },
+        {
+            "name": "Deichman Bjørvika / Oslo Public Library, Main Branch"
+        },
+        {
+            "name": "Åretak - Viking Rowboat Rental"
+        },
+        {
+            "name": "Sørenga"
+        },
+        {
+            "name": "Mirabel"
+        },
+        {
+            "name": "Sørenga Social Club"
+        },
+        {
+            "name": "Bun's Sørenga"
+        },
+        {
+            "name": "Astrup Fearnley Museet"
+        },
+        {
+            "name": "Fineart Oslo"
+        },
+        {
+            "name": "The Queen Sonja Art Stable"
+        },
+        {
+            "name": "Kunstnernes Hus"
+        },
+        {
+            "name": "House of Literature (Litteraturhuset)"
+        },
+        {
+            "name": "Kunstnernes Jur"
+        },
+        {
+            "name": "Gallery Albin Upp"
+        },
+        {
+            "name": "The Vigeland Museum"
+        },
+        {
+            "name": "Vigeland Sculpture Park"
+        },
+        {
+            "name": "Anne på landet – Frognerparken"
+        }
+        {
+            "name": "Botanical Garden"
+        },
+        {
+            "name": "Grünerløkka Brygghus"
+        },
+        {
+            "name": "Velouria Vintage"
+        },
+        {
+            "name": "Haralds Vaffel"
+        },
+        {
+            "name": "Frøken Dianas Salonger"
+        },
+        {
+            "name": "Mathallen Food Hall"
+        },
+        {
+            "name": "Ingensteds"
+        },
+        {
+            "name": "Blå"
+        }
+    ],
+    "enriched_pois": [
+        {
+            "name": "Wadi Mujib, Jordan",
+            "lat": 31.46260894670916,
+            "lon": 35.82206774147152
+        },
+        {
+            "name": "Nordmarka, Oslo",
+            "lat": 59.9675,
+            "lon": 10.7500
+        },
+        {
+            "name": "Akerselva River, Oslo",
+            "lat": 59.9230,
+            "lon": 10.7529
+        },
+        {
+            "name": "Harbour Promenade, Oslo",
+            "lat": 59.9075,
+            "lon": 10.7521
+        },
+        {
+            "name": "Deichman Library, Oslo",
+            "lat": 59.9139,
+            "lon": 10.7522
+        },
+        {
+            "name": "MUNCH museum, Oslo",
+            "lat": 59.9074,
+            "lon": 10.7528
+        },
+        {
+            "name": "Talormade Oslobukta, Oslo",
+            "lat": 59.9079,
+            "lon": 10.7553
+        },
+        {
+            "name": "Operastranda in Bjørvika, Oslo",
+            "lat": 59.9076,
+            "lon": 10.7530
+        },
+        {
+            "name": "Deichman Bjørvika / Oslo Public Library, Main Branch, Oslo",
+            "lat": 59.9080,
+            "lon": 10.7535
+        },
+        {
+            "name": "SALT, Oslo",
+            "lat": 59.9077,
+            "lon": 10.7525
+        },
+        {
+            "name": "Anker bridge, Oslo",
+            "lat": 59.9215,
+            "lon": 10.7520
+        },
+        {
+            "name": "Mathallen Food Hall, Oslo",
+            "lat": 59.9235,
+            "lon": 10.7590
+        },
+        {
+            "name": "The Palace Park",
+            "lat": 59.9169,
+            "lon": 10.7272
+        },
+        {
+            "name": "The Royal Palace",
+            "lat": 59.9169,
+            "lon": 10.7272
+        },
+        {
+            "name": "Oslo City Hall",
+            "lat": 59.9115,
+            "lon": 10.7383
+        },
+        {
+            "name": "Akershus Fortress",
+            "lat": 59.9075,
+            "lon": 10.7380
+        },
+        {
+            "name": "Vippa Oslo",
+            "lat": 59.9078,
+            "lon": 10.7523
+        },
+        {
+            "name": "Koie Ramen Munch",
+            "lat": 59.9085,
+            "lon": 10.7527
+        },
+        {
+            "name": "Bjørvika",
+            "lat": 59.9076,
+            "lon": 10.7530
+        },
+        {
+            "name": "The Tiger",
+            "lat": 59.9079,
+            "lon": 10.7530
+        },
+        {
+            "name": "Deichman Bjørvika / Oslo Public Library, Main Branch",
+            "lat": 59.9080,
+            "lon": 10.7535
+        },
+        {
+            "name": "Åretak - Viking Rowboat Rental",
+            "lat": 59.9082,
+            "lon": 10.7529
+        },
+        {
+            "name": "Sørenga",
+            "lat": 59.9074,
+            "lon": 10.7525
+        },
+        {
+            "name": "Mirabel",
+            "lat": 59.9076,
+            "lon": 10.7527
+        },
+        {
+            "name": "Sørenga Social Club",
+            "lat": 59.9075,
+            "lon": 10.7526
+        },
+        {
+            "name": "Bun's Sørenga",
+            "lat": 59.9077,
+            "lon": 10.7528
+        },
+        {
+            "name": "Astrup Fearnley Museet",
+            "lat": 59.9079,
+            "lon": 10.7524
+        },
+        {
+            "name": "Fineart Oslo",
+            "lat": 59.9230,
+            "lon": 10.7529
+        },
+        {
+            "name": "The Queen Sonja Art Stable",
+            "lat": 59.9180,
+            "lon": 10.7290
+        },
+        {
+            "name": "Kunstnernes Hus",
+            "lat": 59.9235,
+            "lon": 10.7520
+        },
+        {
+            "name": "House of Literature (Litteraturhuset)",
+            "lat": 59.9230,
+            "lon": 10.7525
+        },
+        {
+            "name": "Kunstnernes Jur",
+            "lat": 59.9232,
+            "lon": 10.7523
+        },
+        {
+            "name": "Gallery Albin Upp",
+            "lat": 59.9234,
+            "lon": 10.7521
+        },
+        {
+            "name": "The Vigeland Museum",
+            "lat": 59.9270,
+            "lon": 10.6980
+        },
+        {
+            "name": "Vigeland Sculpture Park",
+            "lat": 59.9275,
+            "lon": 10.6985
+        },
+        {
+            "name": "Anne på landet – Frognerparken",
+            "lat": 59.9260,
+            "lon": 10.7000
+        }
+        {
+            "name": "Botanical Garden",
+            "lat": 59.9278,
+            "lon": 10.7050
+        },
+        {
+            "name": "Grünerløkka Brygghus",
+            "lat": 59.9250,
+            "lon": 10.7590
+        },
+        {
+            "name": "Velouria Vintage",
+            "lat": 59.9245,
+            "lon": 10.7595
+        },
+        {
+            "name": "Haralds Vaffel",
+            "lat": 59.9240,
+            "lon": 10.7600
+        },
+        {
+            "name": "Frøken Dianas Salonger",
+            "lat": 59.9238,
+            "lon": 10.7605
+        },
+        {
+            "name": "Mathallen Food Hall",
+            "lat": 59.9235,
+            "lon": 10.7590
+        },
+        {
+            "name": "Ingensteds",
+            "lat": 59.9232,
+            "lon": 10.7592
+        },
+        {
+            "name": "Blå",
+            "lat": 59.9228,
+            "lon": 10.7594
+        }
+    ]
+}
