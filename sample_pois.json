@@ -1,5 +1,31 @@
-[
-  {"name": "Oslo"},
-  {"name": "Athens Greece"},
-  {"name": "Berlin"}
-]
+{
+  "type": "FeatureCollection", 
+  "properties": {
+    "title": "Norway Fjord Highlights",  
+    "description": "Suggested itinerary extracted from the travel blog"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+	      "order": 1,
+        "name": "Stegastein Viewpoint",
+        "category": "viewpoint",
+        "country_code": "NO",
+        "description": "A scenic platform overlooking Aurlandsfjord.",
+        "link": "https://exampleblog.com/norway#stegastein"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+	      "order": 2,
+        "name": "Flåm Railway",
+        "category": "attraction",
+        "country_code": "NO",
+        "description": "Historic railway running through steep fjord landscapes.",
+        "link": "https://exampleblog.com/norway#flam-railway"
+      }
+    }
+  ]
+}

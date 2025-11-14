@@ -1,5 +1,4 @@
 import requests
-from app.models.poi import POI
 from app.config import settings
 from app.pkg.ai_client import ai_request_async, SYSTEM_MESSAGE, USER_MESSAGE
 from app.pkg.scrape import scrape_webpage
@@ -10,44 +9,73 @@ from app.logger import setup_logger
 logger = setup_logger(__name__)
 
 
-def enrich_pois(pois_text: list[dict]) -> list[POI]:
+def enrich_pois(features: list[dict]) -> list[dict]:
     """
-    Input: [{"name": "Oslo"}, {"name": "Bergen"}]
-    Output: list of POI objects with lat, lon, place_name
+    Input: features from LLM JSON:
+    [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Oslo",
+                "category": "city",
+                "country_code": "NO",
+                "order": 1,
+                "description": "...",
+                "link": "..."
+            }
+        },
+        ...
+    ]
+    Output: same features with "geometry" added (lat/lon) using Search Box API
     """
 
-    logger.info("Enriching %d POIs using Mapbox Geocoding API", len(pois_text))
-
+    logger.info("Enriching %d POIs using Mapbox Search Box API", len(features))
     enriched = []
 
-    for poi in pois_text:
-        name = poi.get("name")
-        if not name:
+    for feature in features:
+        props = feature.get("properties", {})
+        name = props.get("name")
+        country = props.get("country_code")
+        category = props.get("category")
+        if not name or not country:
             continue
 
-        # Mapbox forward geocoding
-        url = f"https://api.mapbox.com/geocoding/v5/mapbox.places/{name}.json"
-        params = {"access_token": settings.MAPBOX_TOKEN, "limit": 1}
+        # Mapbox Search Box Forward API
+        url = "https://api.mapbox.com/search/searchbox/v1/forward"
+        params = {
+            "q": name,
+            "access_token": settings.MAPBOX_TOKEN,
+            "limit": 1,
+            "language": "en",
+            "country": country.upper(),
+        }
+
+        # Optionally include poi_category if provided
+        if category:
+            params["poi_category"] = category
+
         try:
-            resp = requests.get(url, params=params).json()
-            features = resp.get("features")
-            if features:
-                f = features[0]
-                enriched.append(
-                    POI(
-                        name=name,
-                        lat=f["center"][1],
-                        lon=f["center"][0],
-                        place_name=f["place_name"],
-                    )
-                )
+            resp = requests.get(url, params=params, timeout=10).json()
+            results = resp.get("features")
+            if results:
+                f = results[0]
+
+                # Extract coordinates from geometry if available
+                coords = f.get("geometry", {}).get("coordinates")
+                if coords and len(coords) == 2:
+                    feature["geometry"] = {
+                        "type": "Point",
+                        "coordinates": coords
+                    }
+                    enriched.append(feature)
+                else:
+                    logger.warning("No geometry coordinates for POI: %s (%s)", name, country)
             else:
-                logger.warning("No geocoding result for POI: %s", name)
+                logger.warning("No search result for POI: %s (%s)", name, country)
         except Exception as e:
             logger.error("Failed to enrich POI '%s': %s", name, e)
 
     logger.info("Enriched %d POIs", len(enriched))
-
     return enriched
 
 
