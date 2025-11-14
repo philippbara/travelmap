@@ -1,19 +1,13 @@
 import httpx
-from app.config import settings
 
-OPENROUTER_API_KEY = settings.OPENROUTER_API_KEY
-OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
-OPENROUTER_MODEL = "meta-llama/llama-3.3-70b-instruct:free"
-
-
-async def ai_request_async(sys_msg: str, usr_msg: str) -> str:
+async def ai_request_async(ai_conf: dict[str, str], sys_msg: str, usr_msg: str) -> str:
     headers = {
-        "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+        "Authorization": "Bearer {}".format(ai_conf["OPENROUTER_API_KEY"]),
         "Content-Type": "application/json",
     }
 
     payload = {
-        "model": OPENROUTER_MODEL,
+        "model": ai_conf["OPENROUTER_MODEL"],
         "messages": [
             {"role": "system", "content": sys_msg},
             {"role": "user", "content": usr_msg},
@@ -24,7 +18,7 @@ async def ai_request_async(sys_msg: str, usr_msg: str) -> str:
 
     async with httpx.AsyncClient(timeout=45) as client:
         response = await client.post(
-            OPENROUTER_URL,
+            ai_conf["OPENROUTER_URL"],
             headers=headers,
             json=payload,
         )
