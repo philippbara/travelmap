@@ -1,5 +1,4 @@
-import requests as re
-import json
+import httpx
 from app.config import settings
 
 OPENROUTER_API_KEY = settings.OPENROUTER_API_KEY
@@ -7,7 +6,7 @@ OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 OPENROUTER_MODEL = "meta-llama/llama-3.3-70b-instruct:free"
 
 
-def ai_request(sys_msg: str, usr_msg: str) -> str:
+async def ai_request_async(sys_msg: str, usr_msg: str) -> str:
     headers = {
         "Authorization": f"Bearer {OPENROUTER_API_KEY}",
         "Content-Type": "application/json",
@@ -23,10 +22,16 @@ def ai_request(sys_msg: str, usr_msg: str) -> str:
         "top_p": 1.0,
     }
 
-    response = re.post(OPENROUTER_URL, headers=headers, json=payload)
+    async with httpx.AsyncClient(timeout=45) as client:
+        response = await client.post(
+            OPENROUTER_URL,
+            headers=headers,
+            json=payload,
+        )
+
     result = response.json()
 
-    # Parse the response
+    # Parse OpenRouter response safely
     try:
         ai_content = result["choices"][0]["message"]["content"]
     except (KeyError, IndexError) as e:
