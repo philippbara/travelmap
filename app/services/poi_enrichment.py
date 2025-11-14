@@ -64,7 +64,15 @@ async def parse_blog_to_pois(url: str) -> list[dict]:
 
     logger.info("Sending text to AI for POI extraction")
 
-    ai_response = await ai_request_async(SYSTEM_MESSAGE, USER_MESSAGE.format(blog_text))
+    ai_response = await ai_request_async(
+        {
+            "OPENROUTER_API_KEY": settings.OPENROUTER_API_KEY,
+            "OPENROUTER_URL": "https://openrouter.ai/api/v1/chat/completions",
+            "OPENROUTER_MODEL": "meta-llama/llama-3.3-70b-instruct:free",
+        },
+        SYSTEM_MESSAGE,
+        USER_MESSAGE.format(blog_text),
+    )
 
     logger.info("Received AI response, length: %d", len(ai_response))
 

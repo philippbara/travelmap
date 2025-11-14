@@ -2,357 +2,855 @@
     "id": "article_03",
     "url": "https://www.visitnorway.com/places-to-go/city-break/10000-steps/oslo/",
     "title": "24 hours in Oslo | 5 cool city walks",
-    "ai_json": [
-        {
-            "name": "Nordmarka, Oslo"
+    "ai_json": {
+        "type": "FeatureCollection",
+        "properties": {
+            "title": "24 Hours in Oslo",
+            "description": "Extracted itinerary from the Visit Norway guide to city walks in Oslo."
         },
-        {
-            "name": "Akerselva River, Oslo"
-        },
-        {
-            "name": "Harbour Promenade, Oslo"
-        },
-        {
-            "name": "Deichman Library, Oslo"
-        },
-        {
-            "name": "MUNCH museum, Oslo"
-        },
-        {
-            "name": "Talormade Oslobukta, Oslo"
-        },
-        {
-            "name": "Operastranda in Bjørvika, Oslo"
-        },
-        {
-            "name": "Deichman Bjørvika / Oslo Public Library, Main Branch, Oslo"
-        },
-        {
-            "name": "SALT, Oslo"
-        },
-        {
-            "name": "Anker bridge, Oslo"
-        },
-        {
-            "name": "Mathallen Food Hall, Oslo"
-        },
-        {
-            "name": "The Palace Park"
-        },
-        {
-            "name": "The Royal Palace"
-        },
-        {
-            "name": "Oslo City Hall"
-        },
-        {
-            "name": "Akershus Fortress"
-        },
-        {
-            "name": "Vippa Oslo"
-        },
-        {
-            "name": "Koie Ramen Munch"
-        },
-        {
-            "name": "Bjørvika"
-        },
-        {
-            "name": "The Tiger"
-        },
-        {
-            "name": "Deichman Bjørvika / Oslo Public Library, Main Branch"
-        },
-        {
-            "name": "Åretak - Viking Rowboat Rental"
-        },
-        {
-            "name": "Sørenga"
-        },
-        {
-            "name": "Mirabel"
-        },
-        {
-            "name": "Sørenga Social Club"
-        },
-        {
-            "name": "Bun's Sørenga"
-        },
-        {
-            "name": "Astrup Fearnley Museet"
-        },
-        {
-            "name": "Fineart Oslo"
-        },
-        {
-            "name": "The Queen Sonja Art Stable"
-        },
-        {
-            "name": "Kunstnernes Hus"
-        },
-        {
-            "name": "House of Literature (Litteraturhuset)"
-        },
-        {
-            "name": "Kunstnernes Jur"
-        },
-        {
-            "name": "Gallery Albin Upp"
-        },
-        {
-            "name": "The Vigeland Museum"
-        },
-        {
-            "name": "Vigeland Sculpture Park"
-        },
-        {
-            "name": "Anne på landet – Frognerparken"
-        }
-        {
-            "name": "Botanical Garden"
-        },
-        {
-            "name": "Grünerløkka Brygghus"
-        },
-        {
-            "name": "Velouria Vintage"
-        },
-        {
-            "name": "Haralds Vaffel"
-        },
-        {
-            "name": "Frøken Dianas Salonger"
-        },
-        {
-            "name": "Mathallen Food Hall"
-        },
-        {
-            "name": "Ingensteds"
-        },
-        {
-            "name": "Blå"
-        }
-    ],
+        "features": [
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 1,
+                    "name": "Nordmarka, Oslo, Norway",
+                    "category": "park",
+                    "country_code": "NO",
+                    "description": "A vast forested area north of Oslo popular for hiking, skiing, and outdoor recreation.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 2,
+                    "name": "Akerselva River, Oslo, Norway",
+                    "category": "river",
+                    "country_code": "NO",
+                    "description": "A scenic river running through Oslo, lined with waterfalls, bridges, and cultural sites.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 3,
+                    "name": "Harbour Promenade, Oslo, Norway",
+                    "category": "walking_trail",
+                    "country_code": "NO",
+                    "description": "A waterfront walking route connecting key attractions along Oslo’s modern harbor.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 4,
+                    "name": "Deichman Library, Oslo, Norway",
+                    "category": "library",
+                    "country_code": "NO",
+                    "description": "Oslo’s award-winning public library featuring innovative architecture and cultural spaces.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 5,
+                    "name": "MUNCH Museum, Oslo, Norway",
+                    "category": "museum",
+                    "country_code": "NO",
+                    "description": "A waterfront museum dedicated to artist Edvard Munch, home to The Scream and other masterpieces.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 6,
+                    "name": "Talormade Oslobukta, Oslo, Norway",
+                    "category": "cafe",
+                    "country_code": "NO",
+                    "description": "A popular specialty donut and coffee shop located in Oslo’s Oslobukta district.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 7,
+                    "name": "Operastranda, Bjørvika, Oslo, Norway",
+                    "category": "beach",
+                    "country_code": "NO",
+                    "description": "A small urban beach in the Bjørvika district near the Oslo Opera House.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 8,
+                    "name": "Deichman Bjørvika, Oslo Public Library Main Branch, Oslo, Norway",
+                    "category": "library",
+                    "country_code": "NO",
+                    "description": "The main branch of Oslo’s public library system, known for modern design and cultural events.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 9,
+                    "name": "SALT, Oslo, Norway",
+                    "category": "cultural_center",
+                    "country_code": "NO",
+                    "description": "A cultural venue combining saunas, food stalls, and outdoor stages with a Nordic aesthetic.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 10,
+                    "name": "Anker Bridge, Oslo, Norway",
+                    "category": "bridge",
+                    "country_code": "NO",
+                    "description": "A pedestrian bridge crossing Akerselva, connecting neighborhoods around Grünerløkka.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 11,
+                    "name": "Mathallen Food Hall, Oslo, Norway",
+                    "category": "food_court",
+                    "country_code": "NO",
+                    "description": "A large indoor food hall offering diverse eateries, local specialties, and artisan goods.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 12,
+                    "name": "The Palace Park, Oslo, Norway",
+                    "category": "park",
+                    "country_code": "NO",
+                    "description": "A landscaped public park surrounding the Royal Palace in central Oslo.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 13,
+                    "name": "The Royal Palace, Oslo, Norway",
+                    "category": "palace",
+                    "country_code": "NO",
+                    "description": "The official residence of the Norwegian monarch, located at the end of Karl Johans gate.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 14,
+                    "name": "Oslo City Hall, Oslo, Norway",
+                    "category": "city_hall",
+                    "country_code": "NO",
+                    "description": "A landmark civic building known for its Nordic architecture and Nobel Peace Prize ceremony.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 15,
+                    "name": "Akershus Fortress, Oslo, Norway",
+                    "category": "fortress",
+                    "country_code": "NO",
+                    "description": "A medieval fortress overlooking Oslofjord, offering historic buildings and city views.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 16,
+                    "name": "Vippa Oslo, Oslo, Norway",
+                    "category": "food_court",
+                    "country_code": "NO",
+                    "description": "A vibrant street-food hall on the waterfront featuring global cuisine and communal seating.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 17,
+                    "name": "Koie Ramen Munch, Oslo, Norway",
+                    "category": "restaurant",
+                    "country_code": "NO",
+                    "description": "A ramen restaurant located near the MUNCH museum; popular for Tokyo-style bowls.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 18,
+                    "name": "Bjørvika, Oslo, Norway",
+                    "category": "neighborhood",
+                    "country_code": "NO",
+                    "description": "A modern waterfront district known for architecture, culture, and food spaces.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 19,
+                    "name": "The Tiger Sculpture, Oslo, Norway",
+                    "category": "public_art",
+                    "country_code": "NO",
+                    "description": "A bronze tiger sculpture near Oslo Central Station symbolizing the city’s nickname, ‘Tigerstaden’.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 20,
+                    "name": "Åretak Viking Rowboat Rental, Oslo, Norway",
+                    "category": "water_sport",
+                    "country_code": "NO",
+                    "description": "A rental service offering Viking-style wooden rowboats for exploring Oslo’s waterfront.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 21,
+                    "name": "Sørenga, Oslo, Norway",
+                    "category": "neighborhood",
+                    "country_code": "NO",
+                    "description": "A fjordfront neighborhood filled with eateries, swimming areas, and waterfront trails.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 22,
+                    "name": "Mirabel Sørenga, Oslo, Norway",
+                    "category": "restaurant",
+                    "country_code": "NO",
+                    "description": "A Mediterranean-inspired restaurant in Oslo’s Sørenga district.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 23,
+                    "name": "Sørenga Social Club, Oslo, Norway",
+                    "category": "bar",
+                    "country_code": "NO",
+                    "description": "A waterfront cocktail bar in Sørenga offering views of the fjord.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 24,
+                    "name": "Bun's Burger Bar Sørenga, Oslo, Norway",
+                    "category": "restaurant",
+                    "country_code": "NO",
+                    "description": "A casual burger restaurant located in Sørenga, popular with locals and visitors.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 25,
+                    "name": "Astrup Fearnley Museum, Oslo, Norway",
+                    "category": "museum",
+                    "country_code": "NO",
+                    "description": "A contemporary art museum on Tjuvholmen, designed by Renzo Piano.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 26,
+                    "name": "Fineart Oslo, Oslo, Norway",
+                    "category": "art_gallery",
+                    "country_code": "NO",
+                    "description": "A major contemporary art gallery and exhibition space on the waterfront.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 27,
+                    "name": "Queen Sonja Art Stable, Oslo, Norway",
+                    "category": "museum",
+                    "country_code": "NO",
+                    "description": "A royal art space showcasing exhibitions in the former royal stables near the palace.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 28,
+                    "name": "Kunstnernes Hus, Oslo, Norway",
+                    "category": "art_center",
+                    "country_code": "NO",
+                    "description": "A historic artist-run art institution hosting exhibitions, film, and cultural events.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 29,
+                    "name": "The House of Literature (Litteraturhuset), Oslo, Norway",
+                    "category": "cultural_center",
+                    "country_code": "NO",
+                    "description": "One of Europe’s largest literary houses offering debates, lectures, and cultural programming.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 30,
+                    "name": "Gallery Albin Upp, Oslo, Norway",
+                    "category": "art_gallery",
+                    "country_code": "NO",
+                    "description": "A contemporary gallery in Oslo’s Briskeby area hosting exhibitions by Norwegian and international artists.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 31,
+                    "name": "The Vigeland Museum, Oslo, Norway",
+                    "category": "museum",
+                    "country_code": "NO",
+                    "description": "A museum dedicated to the works of Gustav Vigeland next to the world-famous sculpture park.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 32,
+                    "name": "Vigeland Sculpture Park, Oslo, Norway",
+                    "category": "park",
+                    "country_code": "NO",
+                    "description": "A world-renowned sculpture park featuring over 200 works by Gustav Vigeland.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 33,
+                    "name": "Anne På Landet, Frogner Park, Oslo, Norway",
+                    "category": "cafe",
+                    "country_code": "NO",
+                    "description": "A charming café located inside Frogner Park serving pastries, coffee, and small meals.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 34,
+                    "name": "Botanical Garden, Oslo, Norway",
+                    "category": "park",
+                    "country_code": "NO",
+                    "description": "Oslo’s botanical gardens featuring themed plant collections, greenhouses, and walking paths.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 35,
+                    "name": "Grünerløkka Brygghus, Oslo, Norway",
+                    "category": "brewery",
+                    "country_code": "NO",
+                    "description": "A craft brewery and gastropub located in the vibrant Grünerløkka district.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 36,
+                    "name": "Velouria Vintage, Oslo, Norway",
+                    "category": "clothing_store",
+                    "country_code": "NO",
+                    "description": "A curated vintage clothing store specializing in fashion from various eras.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 37,
+                    "name": "Haralds Vaffel, Oslo, Norway",
+                    "category": "restaurant",
+                    "country_code": "NO",
+                    "description": "A beloved waffle stand known for serving Norwegian-style waffles with creative toppings.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 38,
+                    "name": "Frøken Dianas Salonger, Oslo, Norway",
+                    "category": "clothing_store",
+                    "country_code": "NO",
+                    "description": "A boutique offering vintage-inspired clothing, accessories, and design pieces.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 39,
+                    "name": "Ingensteds, Oslo, Norway",
+                    "category": "nightclub",
+                    "country_code": "NO",
+                    "description": "A popular nightlife venue on the banks of Akerselva featuring DJs, concerts, and cultural events.",
+                    "link": null
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "order": 40,
+                    "name": "Blå, Oslo, Norway",
+                    "category": "nightclub",
+                    "country_code": "NO",
+                    "description": "A legendary Oslo club known for live music, electronic nights, and an artistic riverside atmosphere.",
+                    "link": null
+                }
+            }
+        ]
+    },
     "enriched_pois": [
         {
-            "name": "Wadi Mujib, Jordan",
-            "lat": 31.46260894670916,
-            "lon": 35.82206774147152
-        },
-        {
-            "name": "Nordmarka, Oslo",
+            "name": "Nordmarka, Oslo, Norway",
             "lat": 59.9675,
-            "lon": 10.7500
+            "lon": 10.7500,
+            "order": 1,
+            "category": "park",
+            "country_code": "NO",
+            "description": "A vast forested area north of Oslo popular for hiking, skiing, and outdoor recreation.",
+            "link": null
         },
         {
-            "name": "Akerselva River, Oslo",
+            "name": "Akerselva River, Oslo, Norway",
             "lat": 59.9230,
-            "lon": 10.7529
+            "lon": 10.7529,
+            "order": 2,
+            "category": "river",
+            "country_code": "NO",
+            "description": "A scenic river running through Oslo, lined with waterfalls, bridges, and cultural sites.",
+            "link": null
         },
         {
-            "name": "Harbour Promenade, Oslo",
+            "name": "Harbour Promenade, Oslo, Norway",
             "lat": 59.9075,
-            "lon": 10.7521
+            "lon": 10.7521,
+            "order": 3,
+            "category": "walking_trail",
+            "country_code": "NO",
+            "description": "A waterfront walking route connecting key attractions along Oslo’s modern harbor.",
+            "link": null
         },
         {
-            "name": "Deichman Library, Oslo",
+            "name": "Deichman Library, Oslo, Norway",
             "lat": 59.9139,
-            "lon": 10.7522
+            "lon": 10.7522,
+            "order": 4,
+            "category": "library",
+            "country_code": "NO",
+            "description": "Oslo’s award-winning public library featuring innovative architecture and cultural spaces.",
+            "link": null
         },
         {
-            "name": "MUNCH museum, Oslo",
+            "name": "MUNCH Museum, Oslo, Norway",
             "lat": 59.9074,
-            "lon": 10.7528
+            "lon": 10.7528,
+            "order": 5,
+            "category": "museum",
+            "country_code": "NO",
+            "description": "A waterfront museum dedicated to artist Edvard Munch, home to The Scream and other masterpieces.",
+            "link": null
         },
         {
-            "name": "Talormade Oslobukta, Oslo",
+            "name": "Talormade Oslobukta, Oslo, Norway",
             "lat": 59.9079,
-            "lon": 10.7553
+            "lon": 10.7553,
+            "order": 6,
+            "category": "cafe",
+            "country_code": "NO",
+            "description": "A popular specialty donut and coffee shop located in Oslo’s Oslobukta district.",
+            "link": null
         },
         {
-            "name": "Operastranda in Bjørvika, Oslo",
+            "name": "Operastranda, Bjørvika, Oslo, Norway",
             "lat": 59.9076,
-            "lon": 10.7530
+            "lon": 10.7530,
+            "order": 7,
+            "category": "beach",
+            "country_code": "NO",
+            "description": "A small urban beach in the Bjørvika district near the Oslo Opera House.",
+            "link": null
         },
         {
-            "name": "Deichman Bjørvika / Oslo Public Library, Main Branch, Oslo",
+            "name": "Deichman Bjørvika, Oslo Public Library Main Branch, Oslo, Norway",
             "lat": 59.9080,
-            "lon": 10.7535
+            "lon": 10.7535,
+            "order": 8,
+            "category": "library",
+            "country_code": "NO",
+            "description": "The main branch of Oslo’s public library system, known for modern design and cultural events.",
+            "link": null
         },
         {
-            "name": "SALT, Oslo",
+            "name": "SALT, Oslo, Norway",
             "lat": 59.9077,
-            "lon": 10.7525
+            "lon": 10.7525,
+            "order": 9,
+            "category": "cultural_center",
+            "country_code": "NO",
+            "description": "A cultural venue combining saunas, food stalls, and outdoor stages with a Nordic aesthetic.",
+            "link": null
         },
         {
-            "name": "Anker bridge, Oslo",
+            "name": "Anker Bridge, Oslo, Norway",
             "lat": 59.9215,
-            "lon": 10.7520
+            "lon": 10.7520,
+            "order": 10,
+            "category": "bridge",
+            "country_code": "NO",
+            "description": "A pedestrian bridge crossing Akerselva, connecting neighborhoods around Grünerløkka.",
+            "link": null
         },
         {
-            "name": "Mathallen Food Hall, Oslo",
+            "name": "Mathallen Food Hall, Oslo, Norway",
             "lat": 59.9235,
-            "lon": 10.7590
+            "lon": 10.7590,
+            "order": 11,
+            "category": "food_court",
+            "country_code": "NO",
+            "description": "A large indoor food hall offering diverse eateries, local specialties, and artisan goods.",
+            "link": null
         },
         {
-            "name": "The Palace Park",
+            "name": "The Palace Park, Oslo, Norway",
             "lat": 59.9169,
-            "lon": 10.7272
+            "lon": 10.7272,
+            "order": 12,
+            "category": "park",
+            "country_code": "NO",
+            "description": "A landscaped public park surrounding the Royal Palace in central Oslo.",
+            "link": null
         },
         {
-            "name": "The Royal Palace",
+            "name": "The Royal Palace, Oslo, Norway",
             "lat": 59.9169,
-            "lon": 10.7272
+            "lon": 10.7272,
+            "order": 13,
+            "category": "palace",
+            "country_code": "NO",
+            "description": "The official residence of the Norwegian monarch, located at the end of Karl Johans gate.",
+            "link": null
         },
         {
-            "name": "Oslo City Hall",
+            "name": "Oslo City Hall, Oslo, Norway",
             "lat": 59.9115,
-            "lon": 10.7383
+            "lon": 10.7383,
+            "order": 14,
+            "category": "city_hall",
+            "country_code": "NO",
+            "description": "A landmark civic building known for its Nordic architecture and Nobel Peace Prize ceremony.",
+            "link": null
         },
         {
-            "name": "Akershus Fortress",
+            "name": "Akershus Fortress, Oslo, Norway",
             "lat": 59.9075,
-            "lon": 10.7380
+            "lon": 10.7380,
+            "order": 15,
+            "category": "fortress",
+            "country_code": "NO",
+            "description": "A medieval fortress overlooking Oslofjord, offering historic buildings and city views.",
+            "link": null
         },
         {
-            "name": "Vippa Oslo",
+            "name": "Vippa Oslo, Oslo, Norway",
             "lat": 59.9078,
-            "lon": 10.7523
+            "lon": 10.7523,
+            "order": 16,
+            "category": "food_court",
+            "country_code": "NO",
+            "description": "A vibrant street-food hall on the waterfront featuring global cuisine and communal seating.",
+            "link": null
         },
         {
-            "name": "Koie Ramen Munch",
+            "name": "Koie Ramen Munch, Oslo, Norway",
             "lat": 59.9085,
-            "lon": 10.7527
+            "lon": 10.7527,
+            "order": 17,
+            "category": "restaurant",
+            "country_code": "NO",
+            "description": "A ramen restaurant located near the MUNCH museum; popular for Tokyo-style bowls.",
+            "link": null
         },
         {
-            "name": "Bjørvika",
+            "name": "Bjørvika, Oslo, Norway",
             "lat": 59.9076,
-            "lon": 10.7530
+            "lon": 10.7530,
+            "order": 18,
+            "category": "neighborhood",
+            "country_code": "NO",
+            "description": "A modern waterfront district known for architecture, culture, and food spaces.",
+            "link": null
         },
         {
-            "name": "The Tiger",
+            "name": "The Tiger Sculpture, Oslo, Norway",
             "lat": 59.9079,
-            "lon": 10.7530
+            "lon": 10.7530,
+            "order": 19,
+            "category": "public_art",
+            "country_code": "NO",
+            "description": "A bronze tiger sculpture near Oslo Central Station symbolizing the city’s nickname, ‘Tigerstaden’.",
+            "link": null
         },
         {
-            "name": "Deichman Bjørvika / Oslo Public Library, Main Branch",
-            "lat": 59.9080,
-            "lon": 10.7535
-        },
-        {
-            "name": "Åretak - Viking Rowboat Rental",
+            "name": "Åretak Viking Rowboat Rental, Oslo, Norway",
             "lat": 59.9082,
-            "lon": 10.7529
+            "lon": 10.7529,
+            "order": 20,
+            "category": "water_sport",
+            "country_code": "NO",
+            "description": "A rental service offering Viking-style wooden rowboats for exploring Oslo’s waterfront.",
+            "link": null
         },
         {
-            "name": "Sørenga",
+            "name": "Sørenga, Oslo, Norway",
             "lat": 59.9074,
-            "lon": 10.7525
+            "lon": 10.7525,
+            "order": 21,
+            "category": "neighborhood",
+            "country_code": "NO",
+            "description": "A fjordfront neighborhood filled with eateries, swimming areas, and waterfront trails.",
+            "link": null
         },
         {
-            "name": "Mirabel",
+            "name": "Mirabel Sørenga, Oslo, Norway",
             "lat": 59.9076,
-            "lon": 10.7527
+            "lon": 10.7527,
+            "order": 22,
+            "category": "restaurant",
+            "country_code": "NO",
+            "description": "A Mediterranean-inspired restaurant in Oslo’s Sørenga district.",
+            "link": null
         },
         {
-            "name": "Sørenga Social Club",
+            "name": "Sørenga Social Club, Oslo, Norway",
             "lat": 59.9075,
-            "lon": 10.7526
+            "lon": 10.7526,
+            "order": 23,
+            "category": "bar",
+            "country_code": "NO",
+            "description": "A waterfront cocktail bar in Sørenga offering views of the fjord.",
+            "link": null
         },
         {
-            "name": "Bun's Sørenga",
+            "name": "Bun's Burger Bar Sørenga, Oslo, Norway",
             "lat": 59.9077,
-            "lon": 10.7528
+            "lon": 10.7528,
+            "order": 24,
+            "category": "restaurant",
+            "country_code": "NO",
+            "description": "A casual burger restaurant located in Sørenga, popular with locals and visitors.",
+            "link": null
         },
         {
-            "name": "Astrup Fearnley Museet",
+            "name": "Astrup Fearnley Museum, Oslo, Norway",
             "lat": 59.9079,
-            "lon": 10.7524
+            "lon": 10.7524,
+            "order": 25,
+            "category": "museum",
+            "country_code": "NO",
+            "description": "A contemporary art museum on Tjuvholmen, designed by Renzo Piano.",
+            "link": null
         },
         {
-            "name": "Fineart Oslo",
+            "name": "Fineart Oslo, Oslo, Norway",
             "lat": 59.9230,
-            "lon": 10.7529
+            "lon": 10.7529,
+            "order": 26,
+            "category": "art_gallery",
+            "country_code": "NO",
+            "description": "A major contemporary art gallery and exhibition space on the waterfront.",
+            "link": null
         },
         {
-            "name": "The Queen Sonja Art Stable",
+            "name": "Queen Sonja Art Stable, Oslo, Norway",
             "lat": 59.9180,
-            "lon": 10.7290
+            "lon": 10.7290,
+            "order": 27,
+            "category": "museum",
+            "country_code": "NO",
+            "description": "A royal art space showcasing exhibitions in the former royal stables near the palace.",
+            "link": null
         },
         {
-            "name": "Kunstnernes Hus",
+            "name": "Kunstnernes Hus, Oslo, Norway",
             "lat": 59.9235,
-            "lon": 10.7520
+            "lon": 10.7520,
+            "order": 28,
+            "category": "art_center",
+            "country_code": "NO",
+            "description": "A historic artist-run art institution hosting exhibitions, film, and cultural events.",
+            "link": null
         },
         {
-            "name": "House of Literature (Litteraturhuset)",
+            "name": "The House of Literature (Litteraturhuset), Oslo, Norway",
             "lat": 59.9230,
-            "lon": 10.7525
+            "lon": 10.7525,
+            "order": 29,
+            "category": "cultural_center",
+            "country_code": "NO",
+            "description": "One of Europe’s largest literary houses offering debates, lectures, and cultural programming.",
+            "link": null
         },
         {
-            "name": "Kunstnernes Jur",
-            "lat": 59.9232,
-            "lon": 10.7523
-        },
-        {
-            "name": "Gallery Albin Upp",
+            "name": "Gallery Albin Upp, Oslo, Norway",
             "lat": 59.9234,
-            "lon": 10.7521
+            "lon": 10.7521,
+            "order": 30,
+            "category": "art_gallery",
+            "country_code": "NO",
+            "description": "A contemporary gallery in Oslo’s Briskeby area hosting exhibitions by Norwegian and international artists.",
+            "link": null
         },
         {
-            "name": "The Vigeland Museum",
+            "name": "The Vigeland Museum, Oslo, Norway",
             "lat": 59.9270,
-            "lon": 10.6980
+            "lon": 10.6980,
+            "order": 31,
+            "category": "museum",
+            "country_code": "NO",
+            "description": "A museum dedicated to the works of Gustav Vigeland next to the world-famous sculpture park.",
+            "link": null
         },
         {
-            "name": "Vigeland Sculpture Park",
+            "name": "Vigeland Sculpture Park, Oslo, Norway",
             "lat": 59.9275,
-            "lon": 10.6985
+            "lon": 10.6985,
+            "order": 32,
+            "category": "park",
+            "country_code": "NO",
+            "description": "A world-renowned sculpture park featuring over 200 works by Gustav Vigeland.",
+            "link": null
         },
         {
-            "name": "Anne på landet – Frognerparken",
+            "name": "Anne På Landet, Frogner Park, Oslo, Norway",
             "lat": 59.9260,
-            "lon": 10.7000
-        }
+            "lon": 10.7000,
+            "order": 33,
+            "category": "cafe",
+            "country_code": "NO",
+            "description": "A charming café located inside Frogner Park serving pastries, coffee, and small meals.",
+            "link": null
+        },
         {
-            "name": "Botanical Garden",
+            "name": "Botanical Garden, Oslo, Norway",
             "lat": 59.9278,
-            "lon": 10.7050
+            "lon": 10.7050,
+            "order": 34,
+            "category": "park",
+            "country_code": "NO",
+            "description": "Oslo’s botanical gardens featuring themed plant collections, greenhouses, and walking paths.",
+            "link": null
         },
         {
-            "name": "Grünerløkka Brygghus",
+            "name": "Grünerløkka Brygghus, Oslo, Norway",
             "lat": 59.9250,
-            "lon": 10.7590
+            "lon": 10.7590,
+            "order": 35,
+            "category": "brewery",
+            "country_code": "NO",
+            "description": "A craft brewery and gastropub located in the vibrant Grünerløkka district.",
+            "link": null
         },
         {
-            "name": "Velouria Vintage",
+            "name": "Velouria Vintage, Oslo, Norway",
             "lat": 59.9245,
-            "lon": 10.7595
+            "lon": 10.7595,
+            "order": 36,
+            "category": "clothing_store",
+            "country_code": "NO",
+            "description": "A curated vintage clothing store specializing in fashion from various eras.",
+            "link": null
         },
         {
-            "name": "Haralds Vaffel",
+            "name": "Haralds Vaffel, Oslo, Norway",
             "lat": 59.9240,
-            "lon": 10.7600
+            "lon": 10.7600,
+            "order": 37,
+            "category": "restaurant",
+            "country_code": "NO",
+            "description": "A beloved waffle stand known for serving Norwegian-style waffles with creative toppings.",
+            "link": null
         },
         {
-            "name": "Frøken Dianas Salonger",
+            "name": "Frøken Dianas Salonger, Oslo, Norway",
             "lat": 59.9238,
-            "lon": 10.7605
+            "lon": 10.7605,
+            "order": 38,
+            "category": "clothing_store",
+            "country_code": "NO",
+            "description": "A boutique offering vintage-inspired clothing, accessories, and design pieces.",
+            "link": null
         },
         {
-            "name": "Mathallen Food Hall",
-            "lat": 59.9235,
-            "lon": 10.7590
-        },
-        {
-            "name": "Ingensteds",
+            "name": "Ingensteds, Oslo, Norway",
             "lat": 59.9232,
-            "lon": 10.7592
+            "lon": 10.7592,
+            "order": 39,
+            "category": "nightclub",
+            "country_code": "NO",
+            "description": "A popular nightlife venue on the banks of Akerselva featuring DJs, concerts, and cultural events.",
+            "link": null
         },
         {
-            "name": "Blå",
+            "name": "Blå, Oslo, Norway",
             "lat": 59.9228,
-            "lon": 10.7594
+            "lon": 10.7594,
+            "order": 40,
+            "category": "nightclub",
+            "country_code": "NO",
+            "description": "A legendary Oslo club known for live music, electronic nights, and an artistic riverside atmosphere.",
+            "link": null
         }
     ]
 }
