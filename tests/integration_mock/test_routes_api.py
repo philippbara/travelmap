@@ -7,7 +7,7 @@ import json
 async def test_generate_route(client, fake_generate_input, mapbox_mock):
 
     body = json.loads(fake_generate_input)
-    
+
     with (
         patch("app.services.poi_enrichment.requests.get", side_effect=mapbox_mock),
         patch("app.routes.api.save_map", return_value="map-id-123") as mock_save,

@@ -98,10 +98,13 @@ def fake_ai_json():
 @pytest.fixture
 def fake_generate_input(fake_ai_json):
     import json
-    return json.dumps([
-        {"name": feature["properties"]["name"]}
-        for feature in fake_ai_json["features"]
-    ])
+
+    return json.dumps(
+        [
+            {"name": feature["properties"]["name"]}
+            for feature in fake_ai_json["features"]
+        ]
+    )
 
 
 # -------------------------------------------------------
@@ -110,6 +113,7 @@ def fake_generate_input(fake_ai_json):
 @pytest.fixture
 def fake_llm_response(fake_ai_json):
     import json
+
     return json.dumps(fake_ai_json)
 
 
